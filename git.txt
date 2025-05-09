@@ -1,0 +1,51 @@
+cd your_folder
+git init
+
+git add .
+git commit -m "some description"
+
+<Go to your GitHub acc on browser create a new empty repo eg: my_repo without README/license/gitignore>
+
+Link local repo to GitHub:
+	git remote add origin https://github.com/your-username/my-repo.git
+
+Push local repo to GitHub:
+	git branch -M main          # Rename default branch to main (if needed)
+	git push -u origin main     # Push to GitHub and set upstream
+
+Pull latest changes:
+	git pull origin main
+
+Create and switch to a new branch:
+	git checkout -b feature-branch
+
+Add and commit changes on the branch:
+	git add .
+	git commit -m "Add new feature"
+
+Push the branch to GitHub:
+	git push -u origin feature-branch
+
+Switch back to main branch:
+	git checkout main
+
+Pull latest from main (optional before merge):
+	git pull origin main
+
+Merge branch into main:
+	git merge feature-branch
+
+Push merged main branch to GitHub:
+	git push origin main
+
+Delete the merged branch (optional):
+	git branch -d feature-branch        # Delete locally
+	git push origin --delete feature-branch  # Delete on GitHub
+
+Delete all files from Repo:
+	git rm -r *
+	git commit -m "Delete all files"
+	git push origin main
+
+Delete repo:
+	manually from website
